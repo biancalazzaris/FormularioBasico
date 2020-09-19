@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em contato</title>
+    <link rel="stylesheet" href="./assets/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="bg-left"> </section>
+    <section class="tx-right">
+        <div class="title">
+            <h2>Experimente grátis</h2>
+            <h4>Cadastre-se e comece a usar agora mesmo!</h4>
+        </div>
+        <div class="forms">
+            <form>
+                <div class="name">
+                    <label for="">Nome *</label> <br>
+                    <input type="text" placeholder="  seu nome completo" required>
+                    <br></div>
+                <div class="email">
+                    <label for="">E-mail *</label> <br>
+                    <input type="email" placeholder="  exemplo@seuemail.com" required>
+                    <br>
+                </div>
+
+                <div class="birth">
+                    <label for="">Data de Nascimento</label> <br>
+                    <input type="date">
+                    <br>
+                </div>
+                <div class="cpf">
+                    <label for="">CPF *</label> <br>
+                    <input type="text" placeholder="    999.999.999-99"> <br>
+                </div>
+
+                <div class="pass">
+                    <label for="">Senha *</label><br>
+                    <input type="password" id="pass" minlength="6" maxlength="24" required> <br>
+                </div>
+
+                <div class="repass">
+                    <label for="">Repita a senha *</label><br>
+                    <input type="password" id="repass" minlength="6" maxlength="24" required><br><br>
+                </div>
+            </form>
+        </div>
+        <div class="agree">
+            <input type="checkbox" required> Li estou de acordo com a <a href="">Política de
+                Privacidade</a> e a <a href="">Política de Uso de informações</a>
+        </div> <br>
+        <div class="botao">
+            <button type="submit" class="buttonEnviar" id="botaoEnviar" onclick="submitButton(e)">ENVIAR</button>
+        </div>
+    </section>
+    <script>
+        let fields = document.getElementsByTagName('input');
+        let fieldPassword = document.querySelector('#pass');
+        let retypePassword = document.querySelector('#repass');
+
+        console.log('elemento', fieldPassword.textContent);
+
+        submitButton.addEventListener('click', function (e) {
+            if (fieldPassword.value === retypePassword.value) {
+                console.log('As senhas conferem!');
+            } else {
+                console.log('As senhas não conferem');
+            }
+        });
+
+        function displayMessage(status) {
+            if (status) {
+                alert('Ops, os campos obrigatórios não foram preenchidos!');
+            }
+        }
+
+        function checkValues(event) {
+            const [name, email] = fields;
+            let setErrorStatusMessage = false;
+            event.preventDefault();
+
+            if (name.value === '' || email.value === '') {
+                setErrorStatusMessage = true;
+                displayMessage(setErrorStatusMessage);
+            }
+    </script>
+    
+</body>
+</html>

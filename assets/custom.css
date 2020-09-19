@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.bg-left {
+	background: url(./bg.jpg) center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column-reverse;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tx-right{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+
+}
+.title {
+    width: 500px;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+}
+
+.title h2 {
+    font-weight: 800;
+    font-size: 28px;
+    margin: 0;
+}
+
+.title h4 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    width: 500px;
+    padding: 30px 0 0 ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.forms input {
+    width: 200px;
+    height: 35px;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid rgb(195, 195, 195) ;
+    cursor: text;
+
+}
+.forms input:focus{
+    border: 4px solid #7FFFD4;
+}
+
+.name, .email, .birth, .cpf, .pass, .repass {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.agree {
+    width: 500px;
+    font-size: 12px;
+    text-align: center;
+}
+.botao {
+    width: 500px;
+    text-align: center;
+}
+
+.buttonEnviar {
+    width: 250px;
+    height: 50px;
+    background-color: #00CC62;
+    border: 2px solid #00CC62;
+    border-radius: 24px 0 24px 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 35px 0 45px;
+}
+@media (min-width: 320px) and (max-width:600px){
+
+.bg-left {
+    background: none; 
+}
+.forms {
+    width: 80wh;
+}
+.agree {
+    width: 300px;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+.bg-left {
+    width: 80%; 
+}
+
+.tx-right {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1281px) {
+
+.tx-right {
+    width: 100%;
+    }
+}
+
+}
